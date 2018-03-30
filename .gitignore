@@ -1,0 +1,30 @@
+.*
+!.gitignore
+target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### developers own need section ###
+src/main/resources/application-personal.properties
+src/main/resources/log4j.properties
+**/credentials*.properties
