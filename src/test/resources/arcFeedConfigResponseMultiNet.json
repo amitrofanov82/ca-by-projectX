@@ -1,0 +1,176 @@
+{
+	"response": {
+		"start": 0,
+		"docs": [
+			{
+				"FeedName": "ivi-arc-clips",
+				"Category": {
+					"Title": "freewheel"
+				},
+				"ReferencedObjects": {
+					"Sites": [
+						{
+							"Title": "spiketv"
+						}
+					],
+					"Tags": [
+						{
+							"Title": "arc"
+						},
+						{
+							"Title": "XML"
+						},
+						{
+							"Title": "Multifile Bysize Feed Process"
+						},
+						{
+							"Title": "FreeMarker"
+						},
+						{
+							"Title": "vh1.com"
+						},
+						{
+							"Title": "logotv.com"
+						},
+						{
+							"Title": "comedycentral.com"
+						},
+						{
+							"Title": "spiketv.com"
+						},
+						{
+							"Title": "tvland.com"
+						},
+						{
+							"Title": "southparkstudios.com"
+						},
+						{
+							"Title": "mtv.com"
+						},
+						{
+							"Title": "nick.com"
+						},
+						{
+							"Title": "nickjr.com"
+						},
+						{
+							"Title": "nickmom.com"
+						},
+						{
+							"Title": "social.syndication.news.com"
+						},
+						{
+							"Title": "vh1"
+						},
+						{
+							"Title": "logo"
+						},
+						{
+							"Title": "comedycentral"
+						},
+						{
+							"Title": "spike"
+						},
+						{
+							"Title": "tvland"
+						},
+						{
+							"Title": "southparkstudios"
+						},
+						{
+							"Title": "mtv"
+						},
+						{
+							"Title": "nick"
+						},
+						{
+							"Title": "nickjr"
+						},
+						{
+							"Title": "nickmom"
+						},
+						{
+							"Title": "Music and Entertainment"
+						},
+						{
+							"Title": "MTV World"
+						},
+						{
+							"Title": "Kids and Family"
+						},
+						{
+							"Title": "Schedule"
+						},
+						{
+							"Title": "nodp"
+						},
+						{
+							"Title": "freewheel"
+						},
+						{
+							"Title": "1 hour"
+						},
+						{
+							"Title": "M"
+						},
+						{
+							"Title": "mtvu.com"
+						},
+						{
+							"Title": "cmt.com"
+						},
+						{
+							"Title": "cmt"
+						},
+						{
+							"Title": "freewheel-test-network"
+						},
+						{
+                            "Title": "freewheel-live-network"
+                        }
+					]
+				}
+			}
+		]
+	},
+	"summary": {
+		"status": 200,
+		"host": "ip-10-242-81-161.us-east-1.aws.cloud.viacom.com",
+		"started": "2017-10-23T15:59:08.202Z",
+		"executionTime": 30,
+		"params": {
+			"stage": "authoring",
+			"q": {
+				"select": {
+					"FeedName": 1,
+					"Category": {
+						"Title": 1
+					},
+					"ReferencedObjects": {
+						"Sites": {
+							"Title": 1
+						},
+						"Tags": {
+							"Title": 1
+						}
+					}
+				},
+				"where": {
+					"feedConfigurationByName": [
+						[
+							"ivi-arc-clips"
+						]
+					]
+				},
+				"rows": 1
+			}
+		},
+		"scheduleTTL": 86400000
+	},
+	"metadata": {
+		"start": 0,
+		"rows": 1,
+		"more": false,
+		"numResults": 1
+	}
+}

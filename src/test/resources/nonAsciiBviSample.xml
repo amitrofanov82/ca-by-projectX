@@ -1,0 +1,44 @@
+<FWCoreContainer bvi_xsd_version="1" contact_email="DL_MTVN_FreeWheel_BVINotification@mtvn.com">
+            <FWVideoDocument video_id="mgid:arc:video:tvland.com:af78a3ce-4932-4d00-9767-425797d960eb">
+                <fwReplaceGroup>true</fwReplaceGroup>
+                <fwOperation>Upsert</fwOperation>
+                <fwContentOwner>
+                    <SelfContentOwner/>
+                </fwContentOwner>
+                <fwTitles>
+                    <titleItem>
+                        <title><![CDATA[The Soul Man: Hangin' with Mr. Cupper: Episode 503: Clips]]></title>
+                        <titleType>Episode Title1</titleType>
+                    </titleItem>
+      <titleItem>
+                            <title><![CDATA[TV Land Videos / Shows / The Soul Man / Clips]]></title>
+                            <titleType>Series</titleType>
+                        </titleItem>
+                </fwTitles>
+                <fwMetaData>
+                    <datumItem>
+                        <value>Clip</value>
+                        <label>Content Type</label>
+                    </datumItem>
+                    <datumItem>
+                        <value>bvi-arc-clips-test-network / r631ok</value>
+                        <label>Feed Name</label>
+                    </datumItem>
+                    <datumItem>
+                        <value>c97d1240e38449bf0ed26b5ee0037514</value>
+                        <label>Trace ID</label>
+                    </datumItem>
+                </fwMetaData>
+                <fwDescriptions>
+                    <descriptionItem>
+                        <description><![CDATA[When the stakes are high for Boyce¹s campaign, Lolli remembers something that may put it at risk.]]></description>						
+                        <descriptionType>Episode</descriptionType>
+                    </descriptionItem>
+                </fwDescriptions>
+                    <fwDateAvailable>
+                        <dateAvailableStart>2017-10-05 06:00:00</dateAvailableStart>
+                        <dateAvailableEnd>2017-10-12 05:59:00</dateAvailableEnd>
+                    </fwDateAvailable>
+                <fwDuration>114</fwDuration>
+            </FWVideoDocument>
+</FWCoreContainer>

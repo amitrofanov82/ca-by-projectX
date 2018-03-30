@@ -1,0 +1,84 @@
+{
+	"status": [
+		{
+			"statusEnum": "ONTIME",
+			"feedGenTimestamp": "Fri Sep 08 06:34:24 EDT 2017",
+			"scheduledTimestamp": "Fri Sep 08 06:32:00 EDT 2017",
+			"feedSchedule": {
+				"feedShortId": "zeayu0",
+				"feedName": "bvi-arc-clips-pro-social",
+				"processType": "MULTIFILE_BYSIZE_WORKFLOW",
+				"quartzExpression": "0 32 0/6 * * ?",
+				"paramShortId": "0opmv7",
+				"paramName": "bvi-arc-pro-social-delta-good.nick-asia.com-fp",
+				"category": "freewheel",
+				"parameters": {
+					"ds.namespace": "good.nick-asia.com",
+					"query.override": "freewheel-arc-clips-pro-social-delta-query",
+					"fep.pp.bvi-unmodified-content-check": "enable"
+				},
+				"scheduled": true,
+				"schedulerName": "bvi-arc-pro-social-scheduler",
+				"schedulerShortId": "akdvtz",
+				"alertEnabled": false,
+				"persistanceEnabled": false,
+				"triggerTime": null
+			},
+			"status": "OK",
+			"weeklyTriggerCount": 28
+		},
+		{
+			"statusEnum": "ONTIME",
+			"feedGenTimestamp": "Fri Sep 08 08:43:34 EDT 2017",
+			"scheduledTimestamp": "Fri Sep 08 08:41:00 EDT 2017",
+			"feedSchedule": {
+				"feedShortId": "zeayu0",
+				"feedName": "bvi-arc-clips-pro-social",
+				"processType": "MULTIFILE_BYSIZE_WORKFLOW",
+				"quartzExpression": "0 41 2/6 * * ?",
+				"paramShortId": "8te5x0",
+				"paramName": "bvi-arc-pro-social-delta-good.nickelodeon.es-fp",
+				"category": "freewheel",
+				"parameters": {
+					"ds.namespace": "good.nickelodeon.es",
+					"query.override": "freewheel-arc-clips-pro-social-delta-query",
+					"fep.pp.bvi-unmodified-content-check": "enable"
+				},
+				"scheduled": true,
+				"schedulerName": "bvi-arc-pro-social-scheduler",
+				"schedulerShortId": "akdvtz",
+				"alertEnabled": false,
+				"persistanceEnabled": false,
+				"triggerTime": null
+			},
+			"status": "OK",
+			"weeklyTriggerCount": 28
+		},
+		{
+			"statusEnum": "ONTIME",
+			"feedGenTimestamp": "Fri Sep 08 09:34:13 EDT 2017",
+			"scheduledTimestamp": "Fri Sep 08 09:30:00 EDT 2017",
+			"feedSchedule": {
+				"feedShortId": "zeayu0",
+				"feedName": "bvi-arc-clips-pro-social",
+				"processType": "MULTIFILE_BYSIZE_WORKFLOW",
+				"quartzExpression": "0 30 3/6 * * ?",
+				"paramShortId": "9y9wmp",
+				"paramName": "bvi-arc-pro-social-delta-good.nickelodeon.ru-fp",
+				"category": "freewheel",
+				"parameters": {
+					"ds.namespace": "good.nickelodeon.ru",
+					"query.override": "freewheel-arc-clips-pro-social-delta-query",
+					"fep.pp.bvi-unmodified-content-check": "enable"
+				},
+				"scheduled": true,
+				"schedulerName": "bvi-arc-pro-social-scheduler",
+				"schedulerShortId": "akdvtz",
+				"alertEnabled": false,
+				"persistanceEnabled": false,
+				"triggerTime": null
+			},
+			"status": "NOT_OK",
+			"weeklyTriggerCount": 28
+		}]
+}

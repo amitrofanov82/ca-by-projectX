@@ -1,0 +1,22 @@
+{
+  "_comment": "sample request, which goes as url encoded param to mongo-arc",
+  "_comment2": "http://mongo-arc-v2.mtvnservices.com/jp/feedsplatform\?q\=%7B%0A%20%20%22select%22:%20%7B%0A%20%20%20%20%22FeedName%22:1,%0A%20%20%20%20%22Category%22:%20%7B%0A%20%20%20%20%20%20%22Title%22:%201%0A%20%20%20%20%7D,%0A%20%20%20%20%22ReferencedObjects%22:%20%7B%0A%20%20%20%20%20%20%22Sites%22:%20%7B%0A%20%20%20%20%20%20%20%20%22Title%22:%201%0A%20%20%20%20%20%20%7D,%0A%20%20%20%20%20%20%22Tags%22:%20%7B%0A%20%20%20%20%20%20%20%20%22Title%22:1%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D,%0A%20%20%22where%22:%20%7B%0A%20%20%20%20%22feedConfigurationByName%22:%20\[\[%22bvi-arc-full-episodes%22,%22bvi-arc-clips%22\]\]%0A%20%20%7D,%0A%20%20%22rows%22:%202%0A%7D%0A\&stage\=authoring",
+  "select": {
+    "FeedName":1,
+    "Category": {
+      "Title": 1
+    },
+    "ReferencedObjects": {
+      "Sites": {
+        "Title": 1
+      },
+      "Tags": {
+        "Title":1
+      }
+    }
+  },
+  "where": {
+    "feedConfigurationByName": [["bvi-arc-full-episodes"]]
+  },
+  "rows": 1
+}
