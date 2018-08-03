@@ -2,6 +2,7 @@ CREATE TABLE user (
     id bigserial NOT NULL,
     nickname varchar(64) NOT NULL,
     email varchar(128),
+    phone varchar(16),
     password varchar(64),
     about text,
     birthdate date,
