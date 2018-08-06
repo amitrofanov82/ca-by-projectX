@@ -1,4 +1,4 @@
-CREATE TABLE user (
+CREATE TABLE users (
     id bigserial NOT NULL,
     nickname varchar(64) NOT NULL,
     email varchar(128),
@@ -24,8 +24,8 @@ CREATE TABLE shop (
     rating smallserial,
     template_id bigserial,
     PRIMARY KEY(id),
-    FOREIGN KEY admin_id REFERENCES user(id),
-    FOREIGN KEY template_id REFERENCES shop_template(id)
+    FOREIGN KEY (admin_id) REFERENCES users(id),
+    FOREIGN KEY (template_id) REFERENCES shop_template(id)
 );
 
 CREATE TABLE shop_template (
@@ -40,8 +40,8 @@ CREATE TABLE shop_user_relation (
     user_id bigserial,
     shop_id bigserial,
     PRIMARY KEY(id),
-    FOREIGN KEY user_id REFERENCES user(id),
-    FOREIGN KEY shop_id REFERENCES shop(id)
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (shop_id) REFERENCES shop(id)
 );
 
 CREATE TABLE user_user_relation (
@@ -49,13 +49,13 @@ CREATE TABLE user_user_relation (
     follower_id bigserial,
     followee_id bigserial,
     PRIMARY KEY(id),
-    FOREIGN KEY follower_id REFERENCES user(id),
-    FOREIGN KEY followee_id REFERENCES user(id)
+    FOREIGN KEY (follower_id) REFERENCES users(id),
+    FOREIGN KEY (followee_id) REFERENCES users(id)
 );
 
 CREATE TABLE subscription_list (
     id bigserial NOT NULL,
     user_id bigserial,
     email varchar(128),
-    FOREIGN KEY user_id REFERENCES user(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
