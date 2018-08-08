@@ -1,0 +1,24 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <!-- For PostgreSQL9 we use varchar without length constraints
+        because internaly it transforms into same 'varlena' type
+        See Tip on https://www.postgresql.org/docs/current/static/datatype-character.html 
+    -->
+
+    <property name="VARCHAR_32" dbms="postgresql" value="VARCHAR"/>
+    <property name="VARCHAR_64" dbms="postgresql" value="VARCHAR"/>
+    <property name="VARCHAR_128" dbms="postgresql" value="VARCHAR"/>
+    <property name="VARCHAR_255" dbms="postgresql" value="VARCHAR"/>
+    <property name="LONGTEXT" dbms="postgresql" value="TEXT"/>
+
+    <property name="VARCHAR_32" value="VARCHAR(32)"/>
+    <property name="VARCHAR_64" value="VARCHAR(64)"/>
+    <property name="VARCHAR_128" value="VARCHAR(128)"/>
+    <property name="VARCHAR_255" value="VARCHAR(255)"/>
+    <property name="LONGTEXT" value="VARCHAR"/>
+
+    <include file="db/changelog/0.0.1/db-initialization.xml"/>
+</databaseChangeLog>
