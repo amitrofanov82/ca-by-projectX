@@ -21,4 +21,5 @@
     <property name="LONGTEXT" value="VARCHAR"/>
 
     <include file="db/changelog/0.0.1/db-initialization.xml"/>
+    <include file="db/changelog/0.0.1/db-test-data.sql"/>
 </databaseChangeLog>

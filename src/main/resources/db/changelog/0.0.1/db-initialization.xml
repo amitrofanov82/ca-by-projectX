@@ -59,10 +59,4 @@
 			referencedTableName="users" referencedColumnNames="id" />
 	</changeSet>
 
-
-
-
-
-
-
 </databaseChangeLog>
