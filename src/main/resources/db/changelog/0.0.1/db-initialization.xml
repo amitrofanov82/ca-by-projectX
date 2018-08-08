@@ -1,53 +1,68 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
-<!-- 
-    To help make scripts database-independent, the following “generic” data types will be converted to the correct database implementation:
-
-    BOOLEAN
-    CURRENCY
-    UUID
-    CLOB
-    BLOB
-    DATE
-    DATETIME
-    TIME
-    BIGINT
-    
-    Or use tokens configured/described at maser.xml   
-    
-    https://www.liquibase.org/documentation/
- -->
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+	<!-- To help make scripts database-independent, the following “generic” 
+		data types will be converted to the correct database implementation: BOOLEAN 
+		CURRENCY UUID CLOB BLOB DATE DATETIME TIME BIGINT Or use tokens configured/described 
+		at maser.xml https://www.liquibase.org/documentation/ -->
 
 
-    <changeSet id="20180808-user-table" author="ProjectX-anonymous">
-        <preConditions onFail="MARK_RAN">
-            <not>
-                <tableExists tableName="users"/>
-            </not>
-        </preConditions>
-        <comment>Create table users</comment>
-        <createTable tableName="users">
-            <column name="id" type="BIGINT" autoIncrement="true">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="nickname" type="${VARCHAR_64}">
-                <constraints nullable="false"/>
-            </column>
-            <column name="email" type="${VARCHAR_128}"/>
-            <column name="phone" type="${VARCHAR_64}"/>
-            <column name="password" type="${VARCHAR_64}"/>
-            <column name="about" type="${LONGTEXT}"/>
-            <column name="birthdate" type="DATE"/>
-            <column name="registered" type="DATETIME"/>
-            <column name="logged" type="DATETIME"/>
-            <column name="avatar_link" type="${LONGTEXT}"/>
-            <column name="location" type="${LONGTEXT}"/>
-            <column name="facebook_id" type="${VARCHAR_64}"/>
-            <column name="twitter_id" type="${VARCHAR_64}"/>
-            <column name="instagram_id" type="${VARCHAR_64}"/>
-        </createTable>
-    </changeSet>
+	<changeSet id="20180808-user-table" author="ProjectX-anonymous">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="users" />
+			</not>
+		</preConditions>
+		<comment>Create table users</comment>
+		<createTable tableName="users">
+			<column name="id" type="BIGINT" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="nickname" type="${VARCHAR_64}">
+				<constraints nullable="false" />
+			</column>
+			<column name="email" type="${VARCHAR_128}" />
+			<column name="phone" type="${VARCHAR_64}" />
+			<column name="password" type="${VARCHAR_64}" />
+			<column name="about" type="${LONGTEXT}" />
+			<column name="birthdate" type="DATE" />
+			<column name="registered" type="DATETIME" />
+			<column name="logged" type="DATETIME" />
+			<column name="avatar_link" type="${LONGTEXT}" />
+			<column name="location" type="${LONGTEXT}" />
+			<column name="facebook_id" type="${VARCHAR_64}" />
+			<column name="twitter_id" type="${VARCHAR_64}" />
+			<column name="instagram_id" type="${VARCHAR_64}" />
+		</createTable>
+	</changeSet>
+
+	<changeSet id="20180808-shop-table" author="ProjectX-anonymous">
+		<preConditions onFail="MARK_RAN">
+			<not>
+				<tableExists tableName="shop" />
+			</not>
+		</preConditions>
+		<comment>Create table users</comment>
+		<createTable tableName="shop">
+			<column name="id" type="BIGINT" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="admin_id" type="BIGINT" autoIncrement="true">
+				<constraints nullable="false" />
+			</column>
+
+		</createTable>
+
+		<addForeignKeyConstraint baseTableName="shop"
+			baseColumnNames="admin_id" constraintName="ShopToUserReference"
+			referencedTableName="users" referencedColumnNames="id" />
+	</changeSet>
+
+
+
+
+
+
 
 </databaseChangeLog>
