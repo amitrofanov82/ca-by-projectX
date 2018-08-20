@@ -20,6 +20,13 @@
     <property name="VARCHAR_255" value="VARCHAR(255)"/>
     <property name="LONGTEXT" value="VARCHAR"/>
 
-    <include file="db/changelog/0.0.1/db-initialization.xml"/>
-    <include file="db/changelog/0.0.1/db-test-data.sql"/>
+    <!--<include file="db/changelog/0.0.1/db-initialization.xml"/>
+         include file="db/changelog/0.0.1/db-test-data.sql"/> -->
+         
+    <changeSet id="2018-08-20-initialization" author="dev-team">
+        <sqlFile path="db/changelog/0.0.1/users.sql"/>
+        <sqlFile path="db/changelog/0.0.1/catalog.sql"/>
+        <sqlFile path="db/changelog/0.0.1/db-test-data.sql"/>
+    </changeSet>
+     
 </databaseChangeLog>
