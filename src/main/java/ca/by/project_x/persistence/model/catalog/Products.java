@@ -12,8 +12,9 @@ import ca.by.project_x.persistence.model.users.Shops;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
-@Getter @Setter @NoArgsConstructor
+@Getter @Setter @NoArgsConstructor @ToString
 @Entity
 @Table(name="products")
 public class Products {

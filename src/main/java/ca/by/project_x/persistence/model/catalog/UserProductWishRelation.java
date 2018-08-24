@@ -16,8 +16,9 @@ import ca.by.project_x.persistence.model.users.Users;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
-@Getter @Setter @NoArgsConstructor
+@Getter @Setter @NoArgsConstructor @ToString
 @Entity
 @Table(name="user_product_wish_relation")
 public class UserProductWishRelation {
