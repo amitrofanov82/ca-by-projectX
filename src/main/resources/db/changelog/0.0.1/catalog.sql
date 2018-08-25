@@ -24,12 +24,3 @@ CREATE TABLE product_images (
     image_link text NOT NULL,
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
-
-CREATE TABLE user_product_wish_relation (
-    id bigserial NOT NULL,
-    user_id bigint,
-    product_id bigint,
-    PRIMARY KEY(id),
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (product_id) REFERENCES products(id)
-);
