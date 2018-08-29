@@ -1,16 +1,13 @@
 package ca.by.project_x.persistence.model.users;
 
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -38,14 +35,12 @@ public class UserUserFollowRelation {
 	@Column(name="id", nullable=false, unique=true)
 	private long id;
 	
-	@OneToMany
-    @MapsId
+	@OneToOne
     @JoinColumn(name = "follower_id", referencedColumnName = "id", nullable = false)
-    private Set<Users> followerId;
+    private Users followerId;
 	
-	@OneToMany
-    @MapsId
+	@OneToOne
     @JoinColumn(name = "followee_id", referencedColumnName = "id", nullable = false)
-    private Set<Users> followeeId;
+    private Users followeeId;
 	
 }

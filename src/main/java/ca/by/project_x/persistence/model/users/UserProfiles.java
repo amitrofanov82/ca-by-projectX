@@ -4,9 +4,10 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -34,10 +35,14 @@ public class UserProfiles {
 	); * */
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id")
+	private long id;
+	
+	//TODO decide if it will be also useful to have this field at User side
 	@OneToOne
-    @MapsId
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false, updatable = false)
-	private Users userId;
+	private Users user;
 	
 	@Column(name="birthdate")
 	private LocalDate birthdate;

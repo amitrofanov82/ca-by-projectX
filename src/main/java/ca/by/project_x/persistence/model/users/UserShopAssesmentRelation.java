@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -38,16 +37,14 @@ public class UserShopAssesmentRelation {
 	private long id;
 	
 	@OneToOne
-    @MapsId
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false, updatable = false)
 	private Users userId;
 	
 	@OneToOne
-    @MapsId
     @JoinColumn(name = "shop_id", referencedColumnName = "id", nullable = false, updatable = false)
 	private Shops shopId;
 	
-	 //from 1 to 5
+	//from 1 to 5
 	@Column(name="mark", length=1)
 	private byte mark;
 }

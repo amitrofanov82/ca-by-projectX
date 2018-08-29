@@ -9,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -41,7 +40,6 @@ public class Shops {
 	private long id;
 	
 	@OneToOne
-    @MapsId
     @JoinColumn(name = "admin_id", referencedColumnName = "id", nullable = false, updatable = false)
     private Users adminId;
 	
@@ -52,7 +50,6 @@ public class Shops {
 	private String location;
 	
 	@OneToOne
-    @MapsId
     @JoinColumn(name = "template_id", referencedColumnName = "id", nullable = false, updatable = false)
 	private ShopTemplates templateId;
 	

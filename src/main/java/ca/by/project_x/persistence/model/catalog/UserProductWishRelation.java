@@ -1,15 +1,12 @@
 package ca.by.project_x.persistence.model.catalog;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import ca.by.project_x.persistence.model.users.Users;
@@ -38,13 +35,11 @@ public class UserProductWishRelation {
 	@Column(name="id", nullable=false, unique=true)
 	private long id;
 	
-	@OneToMany
-    @MapsId
+	@OneToOne
 	@JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
-	private Set<Users> userId;
+	private Users userId;
 	
-	@OneToMany
-    @MapsId
+	@OneToOne
 	@JoinColumn(name="product_id", referencedColumnName="id", nullable=false)
-	private Set<Products> productId;
+	private Products productId;
 }

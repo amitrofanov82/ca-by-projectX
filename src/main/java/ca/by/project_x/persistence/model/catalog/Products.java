@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import ca.by.project_x.persistence.model.users.Shops;
@@ -42,6 +43,7 @@ public class Products {
 	@Column(name="description")
 	private String description;
 	
+	@ManyToOne
 	@JoinColumn(name="shop_id", referencedColumnName = "id", nullable = false)
 	private Shops shopId;
 	
