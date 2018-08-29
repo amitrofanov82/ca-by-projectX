@@ -19,10 +19,17 @@ CREATE TABLE user_profiles (
     avatar_link text,
     about text,
     twitter_id varchar(50),
-    instagram_id varchar(50)
+    instagram_id varchar(50),
     PRIMARY KEY(id),
     UNIQUE(id, user_id),
     FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE shop_templates (
+    id bigserial NOT NULL,
+    name varchar(64),
+    html_template text,
+    PRIMARY KEY(id)
 );
 
 CREATE TABLE shops (
@@ -35,13 +42,6 @@ CREATE TABLE shops (
     UNIQUE(admin_id),
     FOREIGN KEY (admin_id) REFERENCES users(id),
     FOREIGN KEY (template_id) REFERENCES shop_templates(id)
-);
-
-CREATE TABLE shop_templates (
-    id bigserial NOT NULL,
-    name varchar(64),
-    html_template text,
-    PRIMARY KEY(id)
 );
 
 CREATE TABLE subscription_list (
