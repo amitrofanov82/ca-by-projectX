@@ -1,7 +1,6 @@
 package ca.by.project_x;
 
 import java.util.HashSet;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ConversionServiceFactoryBean;
 import org.springframework.core.convert.ConversionService;

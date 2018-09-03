@@ -1,0 +1,51 @@
+You can find complete list of dependencies at pom.xml. Here are main tools described with links. Standard Java modules are not mentioned.
+
+---
+Spring Boot 2.0.0 (last version as of 2018-08-20 is 2.0.4, we can upgrade it later if desirable)
+http://spring.io/projects/spring-boot
+
+Provides fast and flexible way to build web application of any scale, with all web/html/db/...manymore functionality.
+
+It works in close integration with (all dependencies versions are managed by SpringBoot, we only specify Spring Boot Version):
+Spring Framework 5.0.4  (Includes Spring MVC as a part)
+Spring Data Kay-SR5
+Spring Security 5.0.3 (OAuth module should help us easier integrate with Facebook/Google)
+
+Many other Spring modules can be easile connected on demand. E.g. Spring Social module to communicate with FB&Twitter. Full list is here:
+https://spring.io/projects/
+
+---
+Swagger (1.5.21 - последняя на 2018-08-20 версия для OpenAPI specification 2.0. 
+Хотя уже имеется OpenAPI 3.0, версия Swagger, её поддерживающая есть 2.0.0-rc2, то есть ещё нет устоявшегося релиза):
+https://swagger.io/docs/
+
+Представляет собой набор инструментов, реализующих спецификацию OpenAPI для REST. 
+Для нас это прежде всего:
+  - автодокументация и автогенерирование спецификации серверного REST API на основании джава-кода. (с этим я работал - удобно)
+  - автогенерация Джаваскрипт клиентских библиотек на основании имеющейся спецификации. (с этим я не работал)
+  
+Интеграция сваггера в SpringBoot уже реализована с помощью ещё одной сторонней спринговой библиотеки от Springfox:
+http://springfox.github.io/springfox/docs/current/
+Последняя последняя на 2018-08-20 версия - 2.9.2, является оберткой над Swagger 1.5.x
+
+Таким образом наша зависимость - это Swagger-Core & Swagger-ui от Springfox.
+
+Хороший лаконичный пример реализации базового функционала:
+https://www.vojtechruzicka.com/documenting-spring-boot-rest-api-swagger-springfox/
+
+--- 
+Liquibase 3.5.5 (version is managed by Spring Boot)  (last version for 2018-08-20 is 3.6.2)
+https://www.liquibase.org/
+
+DB Migration tool. 
+
+---
+Hibernate 5.2.14 (version is managed by Spring Boot)  (last version for 2018-08-20 is 5.3.5)
+http://hibernate.org/orm/   (возможно лучше будет читать документацию по спринг-дата)
+
+
+Standart ORM tool. Is available for us as a part of Spring Data.
+
+---
+
+
